@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="/css/materialize.min.css"
+            media="screen,projection"
+        />
+        <link type="text/css" rel="stylesheet" href="/icons/icons.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Index</title>
+        <script
+            type="text/javascript"
+            src="/jslib/jquery.min.js"
+            defer
+        ></script>
+        <script
+            type="text/javascript"
+            src="/jslib/materialize.min.js"
+            defer
+        ></script>
+        <script type="text/javascript" src="/js/settings.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-wrapper teal">
+                    <span class="brand-logo center">Settings</span>
+                    <ul class="left">
+                        <li>
+                            <a href="/">
+                                <i class="material-icons">home</i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="right">
+                        <li>
+                            <a href="/admin-screens/wifi.html">
+                                <i class="material-icons">wifi</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin-screens/settings.html">
+                                <i class="material-icons">settings</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <form id="settings-form" action="/system" method="post">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">dns</i>
+                            <input
+                                id="dns-input"
+                                type="text"
+                                name="dns_name"
+                                class="validate"
+                            />
+                            <label for="dns-input">DNS Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">wifi</i>
+                            <input
+                                id="ssid-input"
+                                name="ssid"
+                                type="text"
+                                class="validate"
+                            />
+                            <label for="ssid-input">Access Point Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input
+                                id="pass-input"
+                                name="password"
+                                type="password"
+                                class="validate"
+                            />
+                            <label for="pass-input"
+                                >Access Point Password</label
+                            >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button
+                            class="iwaves-effect waves-light btn-small col s12"
+                            type="submit"
+                        >
+                            <i class="material-icons prefix">done</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

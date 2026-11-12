@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <script src="/jslib/jquery.min.js"></script>
+        <script src="/jslib/showdown.min.js"></script>
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="/css/materialize.min.css"
+            media="screen,projection"
+        />
+        <link type="text/css" rel="stylesheet" href="/icons/icons.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <script>
+            $(document).ready(() => {
+                const sd = new showdown.Converter({
+                    tables: true,
+                    strikethrough: true,
+                    headerLevelStart: 3,
+                });
+                const title = `%title%`;
+                $(document).prop("title", decodeURIComponent(title));
+                $.get(`/article/${title}.md`, (data, status) => {
+                    const $article = $("#article");
+                    $article.empty();
+                    $article.append(sd.makeHtml(data));
+                });
+                $("#nav-title").text(title);
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-wrapper teal">
+                    <span id="nav-title" class="brand-logo center"></span>
+                    <ul class="center">
+                        <li>
+                            <a href="/">
+                                <i class="material-icons">home</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container" id="article"></div>
+        </main>
+        <script type="text/javascript" src="/jslib/materialize.min.js"></script>
+    </body>
+</html>

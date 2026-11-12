@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="/css/materialize.min.css"
+            media="screen,projection"
+        />
+        <link type="text/css" rel="stylesheet" href="/icons/icons.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Index</title>
+        <script
+            type="text/javascript"
+            src="/jslib/jquery.min.js"
+            defer
+        ></script>
+        <script
+            type="text/javascript"
+            src="/jslib/materialize.min.js"
+            defer
+        ></script>
+        <script type="text/javascript" src="/js/admin_index.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-wrapper teal">
+                    <span class="brand-logo center">Your articles</span>
+                    <ul class="left">
+                        <li>
+                            <a href="/">
+                                <i class="material-icons">home</i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="right">
+                        <li>
+                            <a href="/admin-screens/wifi.html">
+                                <i class="material-icons">wifi</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin-screens/settings.html">
+                                <i class="material-icons">settings</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="section">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Memory</span>
+                            <div class="row">
+                                <span
+                                    class="col s2 grey-text text-darken-2"
+                                    id="mem-text"
+                                >
+                                </span>
+                                <div class="col s10 progress">
+                                    <div id="mem-bar" class="determinate"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div id="article-list" class="section"></div>
+            </div>
+            <div class="fixed-action-btn">
+                <a
+                    class="btn-floating btn-large"
+                    href="/admin-screens/create_article.html"
+                >
+                    <i class="large material-icons">add</i>
+                </a>
+            </div>
+        </main>
+    </body>
+</html>

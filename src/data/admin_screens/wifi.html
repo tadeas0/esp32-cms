@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="/css/materialize.min.css"
+            media="screen,projection"
+        />
+        <link type="text/css" rel="stylesheet" href="/icons/icons.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Connect to WIFI</title>
+        <script
+            type="text/javascript"
+            src="/jslib/jquery.min.js"
+            defer
+        ></script>
+        <script
+            type="text/javascript"
+            src="/jslib/materialize.min.js"
+            defer
+        ></script>
+        <script src="/js/wifi.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-wrapper teal">
+                    <span class="brand-logo center">WiFi Settings</span>
+                    <ul class="left">
+                        <li>
+                            <a href="/">
+                                <i class="material-icons">home</i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="right">
+                        <li>
+                            <a href="/admin-screens/wifi.html">
+                                <i class="material-icons">wifi</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin-screens/settings.html">
+                                <i class="material-icons">settings</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="section">
+                    <ul class="collapsible">
+                        <li>
+                            <div
+                                class="collapsible-header"
+                                id="wifi-title"
+                            ></div>
+                            <div class="collapsible-body">
+                                <ul class="collection">
+                                    <li class="collection-item">
+                                        SSID
+                                        <span id="ssid" class="right"></span>
+                                    </li>
+                                    <li class="collection-item">
+                                        RSSI
+                                        <span id="rssi" class="right"></span>
+                                    </li>
+                                    <li class="collection-item">
+                                        IP
+                                        <span id="ip" class="right"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h3>Available networks</h3>
+                    <ul id="wifi-list" class="collapsible"></ul>
+                </div>
+                <div class="divider"></div>
+                <div class="section">
+                    <h3>Connect to hidden network</h3>
+                    <form id="wifi-form" action="/wifi" method="POST">
+                        <div class="row">
+                            <input
+                                id="ssid"
+                                placeholder="SSID"
+                                class="col s5"
+                            />
+                            <input
+                                id="password"
+                                placeholder="Password"
+                                class="col s5"
+                            />
+                            <button
+                                class="btn waves-effect waves-light col s2"
+                                type="submit"
+                                name="action"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

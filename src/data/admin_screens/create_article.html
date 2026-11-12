@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="/css/materialize.min.css"
+            media="screen,projection"
+        />
+        <link type="text/css" rel="stylesheet" href="/icons/icons.css" />
+        <link type="text/css" rel="stylesheet" href="/css/styles.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Create article</title>
+        <script
+            type="text/javascript"
+            src="/jslib/showdown.min.js"
+            defer
+        ></script>
+        <script
+            type="text/javascript"
+            src="/jslib/jquery.min.js"
+            defer
+        ></script>
+        <script
+            type="text/javascript"
+            src="/jslib/materialize.min.js"
+            defer
+        ></script>
+        <script type="text/javascript" src="/js/editor.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-extended">
+                <div class="nav-wrapper teal">
+                    <span class="brand-logo center">Create article</span>
+                    <ul class="left">
+                        <li>
+                            <a href="/">
+                                <i class="material-icons">home</i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="right">
+                        <li>
+                            <a href="/admin-screens/wifi.html">
+                                <i class="material-icons">wifi</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/admin-screens/settings.html">
+                                <i class="material-icons">settings</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs tabs-transparent teal hide-on-med-and-up">
+                        <li class="tab"><a href="#input-tab">Input</a></li>
+                        <li class="tab">
+                            <a href="#preview-tab">Preview</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="main-content">
+                <form
+                    class="md-form"
+                    id="md-form"
+                    action="/article"
+                    method="post"
+                >
+                    <div class="section">
+                        <div class="row">
+                            <input
+                                id="name-input"
+                                type="text"
+                                name="title"
+                                class="col s10"
+                                placeholder="Article name"
+                                required
+                            />
+                            <button
+                                type="submit"
+                                class="btn waves-effect waves-light col s2"
+                            >
+                                <i class="material-icons">send</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div id="input-tab">
+                            <div class="row">
+                                <textarea
+                                    class="col s12 m6 l6 md-input"
+                                    id="md-input"
+                                    name="text"
+                                    placeholder="Article content..."
+                                    au
+                                ></textarea>
+                                <div
+                                    id="preview-split"
+                                    class="col s6 md-preview hide-on-small-only"
+                                ></div>
+                            </div>
+                        </div>
+                        <div id="preview-tab">
+                            <div
+                                id="preview"
+                                class="col s12 m6 md-preview"
+                            ></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>
